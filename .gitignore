@@ -80,3 +80,5 @@ Icon?
 .zshrc.local
 
 *pyc
+
+*.swp

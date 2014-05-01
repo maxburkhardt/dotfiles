@@ -9,7 +9,7 @@ if is-at-least 4.3.7 ; then
   local return_code="%(?..%{$fg[red]%}%? <%{$reset_color%})"
 
   local user_host="%{$fg[magenta]%}%n@%m%{$reset_color%}"
-  local current_dir="%{$terminfo[bold]$fg[yellow]%} %~%{$reset_color%}"
+  local current_dir="%{$fg[yellow]%} %~%{$reset_color%}"
   local current_time="%{$terminfo[bold]$fg[white]%} %T%{$reset_color%}"
   local rvm_ruby=""
   if which rvm-prompt &> /dev/null; then
