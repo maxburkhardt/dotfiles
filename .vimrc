@@ -273,4 +273,12 @@ augroup encrypted
     autocmd BufWritePost,FileWritePost  *.gpg u
 augroup END
 
+" Pathogen for nerdtree
+execute pathogen#infect()
+:command NT NERDTreeToggle
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " vim: set fenc=utf-8 sw=2 sts=2 foldmethod=marker :
