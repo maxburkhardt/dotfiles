@@ -89,5 +89,6 @@ alias zmv='noglob zmv'
 alias hist-full='history -E 1'
 alias funcs='declare -f'
 alias tmux='tmux -2'
+alias mtr='mtr --curses'
 
 # vim: ft=zsh
