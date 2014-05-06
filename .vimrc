@@ -80,7 +80,7 @@ set cinoptions=e-s,g0,t0,(0,W4
 "                                   Spelling
 " =============================================================================
 if has("spell")
-  set spelllang=en,de,pt,fr
+  set spelllang=en
   set spellfile=~/.vim/spellfile.add
 endif
 
@@ -280,5 +280,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
+map j gj
+map k gk
 " vim: set fenc=utf-8 sw=2 sts=2 foldmethod=marker :
