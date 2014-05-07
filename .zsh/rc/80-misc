@@ -193,3 +193,6 @@ ltail()
 #[[ "$MACHTYPE" != "arm" ]] && is-at-least 4.3.4 && exec 2> >( color_err )
 
 # vim: ft=zsh
+
+# set the PYTHONSTARTUP variable to get nice history in the python shell
+export PYTHONSTARTUP="${HOME}/.pystartup"
