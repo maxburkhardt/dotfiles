@@ -282,4 +282,5 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 map j gj
 map k gk
+map gr gT
 " vim: set fenc=utf-8 sw=2 sts=2 foldmethod=marker :
