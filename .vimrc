@@ -32,7 +32,7 @@ scriptencoding utf-8
 set background=dark     " Syntax highlighting for a dark terminal background.
 set hlsearch            " Highlight search results.
 set ruler               " Show the cursor position all the time.
-set showbreak=…         " Highlight non-wrapped lines.
+"set showbreak=…         " Highlight non-wrapped lines.
 set showcmd             " Display incomplete command in bottom right corner.
 
 if has('gui_running')
