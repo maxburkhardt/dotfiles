@@ -90,5 +90,9 @@ alias hist-full='history -E 1'
 alias funcs='declare -f'
 alias tmux='tmux -2'
 alias mtr='mtr --curses'
+if [ -f /etc/debian-version ]
+  then
+    alias ack='ack-grep'
+fi
 
 # vim: ft=zsh
