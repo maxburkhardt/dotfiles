@@ -22,6 +22,7 @@ setopt pushd_minus              # reference stack entries with '-'
 # Completion 
 setopt complete_in_word         # cursors stays, completion from both ends
 setopt list_packed              # try  to  make the completion list smaller
+unsetopt list_beep
 
 # Expansion and globbing 
 setopt brace_ccl                # {az} brace expansion 
