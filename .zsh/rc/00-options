@@ -12,6 +12,9 @@ LOGCHECK=60           # Time (seconds) between checks for login/logout activity.
 REPORTTIME=5          # Display usage statistics for commands running > 5 sec.
 WORDCHARS="\'*?_-.[]~=/&;!#$%^(){}<>\'"
 
+export VISUAL=vim
+export EDITOR=vim
+
 # All names are case insensitive and underscores are ignored. For example,
 # `allexport' is equivalent to `A__lleXP_ort'.
 
