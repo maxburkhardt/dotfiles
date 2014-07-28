@@ -284,3 +284,6 @@ map j gj
 map k gk
 map gr gT
 " vim: set fenc=utf-8 sw=2 sts=2 foldmethod=marker :
+
+" Mouse mode (experimental)
+set mouse=a
