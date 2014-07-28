@@ -82,6 +82,7 @@ alias 9='pu -9'
 
 # Misc
 alias git='noglob git'
+alias gitst='noglob git status'
 alias zcp='noglob zmv -C'
 alias zln='noglob zmv -L'
 alias zmv='noglob zmv'
