@@ -276,13 +276,23 @@ augroup END
 " Pathogen for nerdtree
 execute pathogen#infect()
 :command NT NERDTreeToggle
+
+" easier nav between splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" move up and down in wrapped lines
 map j gj
 map k gk
+
+" easier tab nav
 map gr gT
+
+" Q is useless, use it for spellcheck instead
+" (move to next misspelled word)
+map Q [s
 " vim: set fenc=utf-8 sw=2 sts=2 foldmethod=marker :
 
 " Mouse mode (experimental)
