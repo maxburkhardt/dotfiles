@@ -292,7 +292,7 @@ map gr gT
 
 " Q is useless, use it for spellcheck instead
 " (move to next misspelled word)
-map Q [s
+map Q ]s
 " vim: set fenc=utf-8 sw=2 sts=2 foldmethod=marker :
 
 " Mouse mode (experimental)
