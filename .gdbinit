@@ -2243,7 +2243,13 @@ document 64bits
 Set gdb to work with 64bits binaries
 end
 
+# Custom stuff I've added
+
+## Nice history
 set history filename /home/maxb/.gdb_history
 set history save
+
+## Pretty printing
+set print pretty on
 
 #EOF
