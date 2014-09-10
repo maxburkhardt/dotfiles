@@ -172,7 +172,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
-Bundle 'vim-scripts/Vim-R-plugin'
+" Bundle 'vim-scripts/Vim-R-plugin'
 " Bundle 'xolox/vim-easytags'
 
 
