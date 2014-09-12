@@ -172,8 +172,10 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
-" Bundle 'vim-scripts/Vim-R-plugin'
 " Bundle 'xolox/vim-easytags'
+Bundle 'wesleyche/SrcExpl'
+Bundle 'scrooloose/nerdtree.git'
+Plugin 'taglist.vim'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -273,9 +275,9 @@ augroup encrypted
     autocmd BufWritePost,FileWritePost  *.gpg u
 augroup END
 
-" Pathogen for nerdtree
-execute pathogen#infect()
 :command NT NERDTreeToggle
+:command TL TlistToggle
+:command SE SrcExplToggle
 
 " easier nav between splits
 nnoremap <C-J> <C-W><C-J>
