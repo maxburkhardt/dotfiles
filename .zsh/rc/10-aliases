@@ -60,6 +60,7 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias v="vim"
 alias vi="vim"
+alias strings="strings -a"
 
 which gls &> /dev/null && alias ls='gls --color=auto'  # prefer GNU version.
 alias la='ls -al'
