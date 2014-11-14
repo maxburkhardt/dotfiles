@@ -175,6 +175,7 @@ Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
 " Bundle 'xolox/vim-easytags'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'scrooloose/nerdtree.git'
+"Bundle 'christoomey/vim-tmux-navigator'  " CTRL+{h,j,k,l} betwen vim and tmux splits
 Plugin 'taglist.vim'
 
 
@@ -280,10 +281,11 @@ augroup END
 :command SE SrcExplToggle
 
 " easier nav between splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" let g:BASH_Ctrl_j = 'off'
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
 " move up and down in wrapped lines
 map j gj
@@ -299,3 +301,6 @@ map Q ]s
 
 " Mouse mode (experimental)
 set mouse=a
+
+" Special config for gvim on GNOME
+set guifont=Monospace
