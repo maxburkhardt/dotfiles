@@ -193,7 +193,7 @@ let g:solarized_hitrail = 1
 if !has('gui_running')
   let g:solarized_termcolors = 256
 end
-colorscheme monokai
+colorscheme inkpot
 
 " LaTeX Suite: Prevents Vim 7 from setting filetype to 'plaintex'.
 let g:tex_flavor = 'latex'
