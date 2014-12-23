@@ -96,5 +96,7 @@ if [ -f /etc/debian_version ]
   then
     alias ack='ack-grep'
 fi
+alias tcpdump-full='sudo tcpdump -nnvvXSs 1514'
+alias pasteboard='xclip -selection clipboard'
 
 # vim: ft=zsh
