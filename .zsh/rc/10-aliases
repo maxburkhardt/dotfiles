@@ -99,4 +99,10 @@ fi
 alias tcpdump-full='sudo tcpdump -nnvvXSs 1514'
 alias pasteboard='xclip -selection clipboard'
 
+# Aliases for pulseaudio on my thinkpad
+alias mute='pactl set-sink-mute 1 1'
+alias unmute='pactl set-sink-mute 1 0'
+alias volup="pactl set-sink-volume 1 -- '+10%'"
+alias voldown="pactl set-sink-volume 1 -- '-10%'"
+
 # vim: ft=zsh
