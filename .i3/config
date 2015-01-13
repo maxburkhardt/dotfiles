@@ -175,3 +175,7 @@ exec --no-startup-id xbindkeys
 
 # Custom colors
 client.focused #f0bc22 #f0bc22 #000000 #f0bc22
+
+# Switch workspaces between monitors
+bindsym $mod+n move workspace to output left
+bindsym $mod+m move workspace to output right
