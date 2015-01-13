@@ -50,6 +50,16 @@
 "xte 'keydown Control_L' 'key minus' 'keyup Control_L'"
   shift + b:13
 
+# Volume controls for i3
+"pactl set-sink-mute 1 toggle"
+  m:0x0 + c:121
+
+"pactl set-sink-volume 1 -- '-5%'"
+  m:0x0 + c:122
+
+"pactl set-sink-volume 1 -- '+5%'"
+  m:0x0 + c:123
+
 # Examples of commands:
 
 #"xbindkeys_show" 
