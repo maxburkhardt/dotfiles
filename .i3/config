@@ -162,6 +162,7 @@ bar {
             urgent_workspace   #aa0000 #990000 #ffffff
         }
         status_command i3status
+        position top
 }
 
 # Start network manager

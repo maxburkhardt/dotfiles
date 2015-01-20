@@ -39,9 +39,8 @@
 
 # Logitech Performance MX
 # #######################
-# Show windows key
-#"xte 'key Super_L'"
-"xte 'key Super_L'"
+# Show windows key is mapped to "turn this into a floating window"
+"xte 'keydown Shift_L' 'keydown Alt_L' 'key space' 'keyup Alt_L' 'keyup Shift_L'"
   b:10 + release
 
 "xte 'keydown Control_L' 'key plus' 'keyup Control_L'"
