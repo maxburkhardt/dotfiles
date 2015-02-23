@@ -169,10 +169,13 @@ bar {
 exec --no-startup-id nm-applet
 
 # Create a background
-exec --no-startup-id feh --bg-scale /home/maxb/Pictures/shuttleiss_nasa_6048.jpg
+exec --no-startup-id feh --bg-scale /home/maxb/Pictures/background
 
 # Run xbindkeys for mouse
 exec --no-startup-id xbindkeys
+
+# Kill bluetooth
+exec --no-startup-id rfkill block bluetooth
 
 # Custom colors
 client.focused #f0bc22 #f0bc22 #000000 #f0bc22
@@ -180,3 +183,10 @@ client.focused #f0bc22 #f0bc22 #000000 #f0bc22
 # Switch workspaces between monitors
 bindsym $mod+n move workspace to output left
 bindsym $mod+m move workspace to output right
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Disable touchpad while typing (experimental)
+exec --no-startup-id syndaemon -i 1 -K -d
