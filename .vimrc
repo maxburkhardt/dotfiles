@@ -157,7 +157,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 "Bundle 'DamienCassou/textlint'
-Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
+"Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'godlygeek/tabular'
 Bundle 'basepi/vim-conque'
@@ -175,8 +175,9 @@ Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
 " Bundle 'xolox/vim-easytags'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'scrooloose/nerdtree.git'
-"Bundle 'christoomey/vim-tmux-navigator'  " CTRL+{h,j,k,l} betwen vim and tmux splits
+Bundle 'christoomey/vim-tmux-navigator'
 Plugin 'taglist.vim'
+Plugin 'rking/ag.vim'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -281,8 +282,8 @@ augroup END
 :command SE SrcExplToggle
 
 " easier nav between splits
-" let g:BASH_Ctrl_j = 'off'
-nnoremap <C-J> <C-W>j
+let g:BASH_Ctrl_j = 'off'
+nnoremap <C-j> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
@@ -293,6 +294,10 @@ map k gk
 
 " easier tab nav
 map gr gT
+
+" shift-h and shift-l for accelerated horizontal scrolling
+map H 3h
+map L 3l
 
 " Q is useless, use it for spellcheck instead
 " (move to next misspelled word)
