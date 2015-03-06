@@ -175,6 +175,33 @@ ltail()
   tail -f $1 | less -S
 }
 
+# Code review function
+# See https://msdn.microsoft.com/en-us/library/bb288454.aspx
+function check_banned_funcs() {
+  for func in strcpy strcpyA strcpyW wcscpy _tcscpy _mbscpy StrCpy \
+  StrCpyA StrCpyW lstrcpy lstrcpyA lstrcpyW _tccpy _mbccpy _ftcscpy \
+  strncpy wcsncpy _tcsncpy _mbsncpy _mbsnbcpy StrCpyN StrCpyNA StrCpyNW \
+  StrNCpy strcpynA StrNCpyA StrNCpyW lstrcpyn lstrcpynA lstrcpynW strcat \
+  strcatA strcatW wcscat _tcscat _mbscat StrCat StrCatA StrCatW lstrcat \
+  lstrcatA lstrcatW StrCatBuff StrCatBuffA StrCatBuffW StrCatChainW _tccat \
+  _mbccat _ftcscat strncat wcsncat _tcsncat _mbsncat _mbsnbcat StrCatN StrCatNA \
+  StrCatNW StrNCat StrNCatA StrNCatW lstrncat lstrcatnA lstrcatnW lstrcatn \
+  sprintfW sprintfA wsprintf wsprintfW wsprintfA sprintf swprintf _stprintf \
+  wvsprintf wvsprintfA wvsprintfW vsprintf _vstprintf vswprintf wvsprintf \
+  wvsprintfA wvsprintfW vsprintf _vstprintf vswprintf strncpy wcsncpy _tcsncpy \
+  _mbsncpy _mbsnbcpy StrCpyN StrCpyNA StrCpyNW StrNCpy strcpynA StrNCpyA \
+  StrNCpyW lstrcpyn lstrcpynA lstrcpynW _fstrncpy strncat wcsncat _tcsncat \
+  _mbsncat _mbsnbcat StrCatN StrCatNA StrCatNW StrNCat StrNCatA StrNCatW \
+  lstrncat lstrcatnA lstrcatnW lstrcatn _fstrncat gets _getts _gettws \
+  IsBadWritePtr IsBadHugeWritePtr IsBadReadPtr IsBadHugeReadPtr IsBadCodePtr \
+  IsBadStringPtr memcpy RtlCopyMemory CopyMemory wmemcpy; do
+    grep -r $func . 1>/dev/null
+    if [ $? -eq 0 ]; then
+      echo $func "found"
+    fi
+  done
+}
+
 # vim: ft=zsh
 
 
