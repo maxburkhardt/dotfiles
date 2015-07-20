@@ -176,8 +176,9 @@ Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'christoomey/vim-tmux-navigator'
-Plugin 'taglist.vim'
+" Plugin 'taglist.vim'
 Plugin 'rking/ag.vim'
+Bundle 'int3/vim-taglist-plus'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -194,7 +195,8 @@ let g:solarized_hitrail = 1
 if !has('gui_running')
   let g:solarized_termcolors = 256
 end
-colorscheme monokai
+" colorscheme monokai
+colorscheme inkpot
 
 " LaTeX Suite: Prevents Vim 7 from setting filetype to 'plaintex'.
 let g:tex_flavor = 'latex'
