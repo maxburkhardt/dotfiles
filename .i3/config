@@ -27,7 +27,8 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # lock screen
-bindsym Ctrl+$mod+l exec i3lock -c 000000
+#bindsym Ctrl+$mod+l exec i3lock -c 000000
+bindsym Ctrl+$mod+l exec i3lock -i /home/maxb/Pictures/root.png -c 000000
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -156,7 +157,7 @@ bar {
             separator  #666666
 
             # Type             border  background font
-            focused_workspace  #f0bc22 #f0bc22 #ffffff
+            focused_workspace  #411666 #411666 #ffffff
             active_workspace   #333333 #5f676a #ffffff
             inactive_workspace #333333 #222222 #888888
             urgent_workspace   #aa0000 #990000 #ffffff
@@ -178,7 +179,7 @@ exec --no-startup-id xbindkeys
 exec --no-startup-id rfkill block bluetooth
 
 # Custom colors
-client.focused #f0bc22 #f0bc22 #000000 #f0bc22
+client.focused #411666 #411666 #ffffff #411666
 
 # Switch workspaces between monitors
 bindsym $mod+n move workspace to output left
@@ -190,3 +191,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 # Disable touchpad while typing (experimental)
 exec --no-startup-id syndaemon -i 1 -K -d
+
+# Fix spotify
+for_window [class="^Spotify$"] floating enable
