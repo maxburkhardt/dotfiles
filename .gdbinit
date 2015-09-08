@@ -2180,7 +2180,7 @@ Enable display of objective-c information in the context window
 end
 
 define enablecpuregisters
-	set $SHOWCPUREGISTERS = 1
+	set $SHOWCPUREGISTERS = 0
 end
 document enablecpuregisters
 Enable display of cpu registers in the context window
