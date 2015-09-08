@@ -7,7 +7,8 @@ load_plugin()
 
 if is-at-least 4.3.7; then
   load_plugin zsh-syntax-highlighting
-  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+  #ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
   ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
   ZSH_HIGHLIGHT_STYLES[alias]='fg=cyan,bold'
   #ZSH_HIGHLIGHT_STYLES[function]='none'

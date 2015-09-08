@@ -24,7 +24,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt -e tmux -2
 
 # lock screen
 #bindsym Ctrl+$mod+l exec i3lock -c 000000
@@ -170,7 +171,8 @@ bar {
 exec --no-startup-id nm-applet
 
 # Create a background
-exec --no-startup-id feh --bg-scale /home/maxb/Pictures/background
+# --bg-scale is better for some images
+exec --no-startup-id feh --bg-fill /home/maxb/Pictures/background
 
 # Run xbindkeys for mouse
 exec --no-startup-id xbindkeys
