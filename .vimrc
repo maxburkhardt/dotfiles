@@ -40,7 +40,7 @@ if has('gui_running')
     set lines=25
     set guioptions-=T   " Remove the toolbar.
     set guifont=Monaco:h11
-    set transparency=5
+    "set transparency=5
 
     " Disable MacVim-specific Cmd/Alt key mappings.
     if has("gui_macvim")
@@ -155,9 +155,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+" Vim package management
 Bundle 'gmarik/vundle'
-"Bundle 'DamienCassou/textlint'
-"Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
+" Color scheme extensions for solarized
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'godlygeek/tabular'
 Bundle 'basepi/vim-conque'
@@ -166,19 +166,28 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-haml'
+" Markdown highlighting
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
-" Bundle 'xolox/vim-easytags'
+" Source Explorer, which finds definitions of variables in ctags-supported
+" files
 Bundle 'wesleyche/SrcExpl'
+" File browser in vim split
 Bundle 'scrooloose/nerdtree.git'
+" Binds keys so that Vim and Tmux use the same navigation
 Bundle 'christoomey/vim-tmux-navigator'
-" Plugin 'taglist.vim'
-Plugin 'rking/ag.vim'
+" Tool to search through directories for usages of a string
+Plugin 'dkprice/vim-easygrep'
+" Taglist, but supports javascript better
 Bundle 'int3/vim-taglist-plus'
+" Scala syntax highlighting support
+Plugin 'derekwyatt/vim-scala'
+"Typescript syntax highlighting support
+Bundle 'leafgarland/typescript-vim'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -195,8 +204,10 @@ let g:solarized_hitrail = 1
 if !has('gui_running')
   let g:solarized_termcolors = 256
 end
-" colorscheme monokai
-colorscheme inkpot
+colorscheme monokai
+" colorscheme molokai
+" colorscheme inkpot
+" colorscheme delek
 
 " LaTeX Suite: Prevents Vim 7 from setting filetype to 'plaintex'.
 let g:tex_flavor = 'latex'
@@ -225,6 +236,7 @@ autocmd BufRead,BufNewFile *.bro      set filetype=bro
 autocmd BufRead,BufNewFile *.ll       set filetype=llvm
 autocmd BufRead,BufNewFile *.kramdown set filetype=markdown
 autocmd BufRead,BufNewFile Portfile   set filetype=tcl
+autocmd BufRead,BufNewFile *.es6      set filetype=javascript
 
 " Respect (Br|D)oxygen comments.
 autocmd FileType c,cpp set comments-=://
