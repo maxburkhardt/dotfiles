@@ -157,10 +157,6 @@ call vundle#rc()
 
 " Vim package management
 Bundle 'gmarik/vundle'
-" Color scheme extensions for solarized
-Bundle 'godlygeek/tabular'
-Bundle 'basepi/vim-conque'
-Bundle 'rstacruz/sparkup'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
