@@ -158,7 +158,6 @@ call vundle#rc()
 " Vim package management
 Bundle 'gmarik/vundle'
 " Color scheme extensions for solarized
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'godlygeek/tabular'
 Bundle 'basepi/vim-conque'
 Bundle 'rstacruz/sparkup'
@@ -188,6 +187,10 @@ Bundle 'int3/vim-taglist-plus'
 Plugin 'derekwyatt/vim-scala'
 "Typescript syntax highlighting support
 Bundle 'leafgarland/typescript-vim'
+" Better JS highlighting
+Bundle 'pangloss/vim-javascript'
+" Highlighting for terraform
+Plugin 'hashivim/vim-terraform'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -320,6 +323,20 @@ map Q ]s
 
 " Mouse mode (experimental)
 set mouse=a
+" This enables mouse-resizable splits on OS X / tmux
+set ttymouse=xterm2
 
 " Special config for gvim on GNOME
 set guifont=Monospace
+
+" I like tabs more than buffers
+" (This is `open file under cursor`)
+map gf <c-w>gf
+
+" Fix my whitespace problems
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
