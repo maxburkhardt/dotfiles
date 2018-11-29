@@ -187,6 +187,9 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'pangloss/vim-javascript'
 " Highlighting for terraform
 Plugin 'hashivim/vim-terraform'
+" Better JSX highlighting
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -236,6 +239,7 @@ autocmd BufRead,BufNewFile *.ll       set filetype=llvm
 autocmd BufRead,BufNewFile *.kramdown set filetype=markdown
 autocmd BufRead,BufNewFile Portfile   set filetype=tcl
 autocmd BufRead,BufNewFile *.es6      set filetype=javascript
+autocmd BufNewFile,BufRead *.hql      set filetype=hive expandtab
 
 " Respect (Br|D)oxygen comments.
 autocmd FileType c,cpp set comments-=://
@@ -336,3 +340,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Don't scatter swpfiles across the filesystem
+set directory=$HOME/.vim/swpfiles
+set backupdir=$HOME/.vim/backups
