@@ -6,6 +6,6 @@
 Icon?
 *pyc
 *.swp
-.vim/swpfiles
+.vim/swpfiles/*.sw*
 .vim/bundle
 .zsh/cache
