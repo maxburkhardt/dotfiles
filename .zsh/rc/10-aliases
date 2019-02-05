@@ -140,3 +140,6 @@ alias pg='ping google.com'
 
 # Easy searching of ruby files
 alias agr='ag -G "\.rb$"'
+
+# Start ssh agent
+alias agent='eval $(ssh-agent -s); ssh-add'

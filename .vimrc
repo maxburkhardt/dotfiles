@@ -168,9 +168,9 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
-" Source Explorer, which finds definitions of variables in ctags-supported
-" files
-Bundle 'wesleyche/SrcExpl'
+" Source Explorer, which finds definitions of variables in ctags-supported files
+" Disabled because it requires ctags, which is annoying to install on some systems
+" Bundle 'wesleyche/SrcExpl'
 " File browser in vim split
 Bundle 'scrooloose/nerdtree.git'
 " Binds keys so that Vim and Tmux use the same navigation
