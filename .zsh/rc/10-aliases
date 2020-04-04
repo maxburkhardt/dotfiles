@@ -50,21 +50,9 @@ case ${OS} in
         export LSCOLORS="GxFxFxdxCxDxDxhbadExEx"
         export CLICOLORS="YES"
         alias ls='ls -G'
-
-        alias psa='ps -wwaxo user,ruser,pid,ppid,pri,pcpu,pmem,vsize,rss,tt,start,args'
-        alias psme='ps -U ${LOGNAME} -wwaxo user,ruser,pid,ppid,pri,pcpu,pmem,vsize,rss,tt,start,args'
-        alias psta='pstree -g2 -w' 
-        alias pstme='pstree -g2 -w -u${LOGNAME}'
-        if whence mvim > /dev/null; then
-          alias m=mvim
-        fi
         ;;
     linux-gnu)
        alias ls='ls --color=auto'
-       alias psa='ps -eo user,ruser,pid,ppid,pri,pcpu,pmem,vsize,rss,tt,start,args'
-       alias psme='psa | grep -E "^USER|${LOGNAME}"'
-       alias psta='pstree -aphlnu'
-       alias pstme='pstree -aphlnu ${LOGNAME}'
        ;;
 esac
 
@@ -72,7 +60,6 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias v="vim"
 alias vi="vim"
-alias strings="strings -a"
 
 which gls &> /dev/null && alias ls='gls --color=auto'  # prefer GNU version.
 alias la='ls -al'
@@ -81,28 +68,10 @@ alias lsa='ls -ld .*'
 alias ..='cd ..'
 alias cd..='cd ..'
 
-alias d='dirs -v'
-pu() { pushd $1 > /dev/null 2>&1; dirs -v; }
-alias po='popd > /dev/null; dirs -v'
-alias 1='pu'
-alias 2='pu -2'
-alias 3='pu -3'
-alias 4='pu -4'
-alias 5='pu -5'
-alias 6='pu -6'
-alias 7='pu -7'
-alias 8='pu -8'
-alias 9='pu -9'
-
 # Misc
-alias git='noglob git'
-alias gitst='noglob git status'
-alias zcp='noglob zmv -C'
-alias zln='noglob zmv -L'
-alias zmv='noglob zmv'
+alias gitst='git status'
 
 alias hist-full='history -E 1'
-alias funcs='declare -f'
 alias tmux='tmux -2'
 alias mtr='mtr --curses'
 if [ -f /etc/debian_version ]
@@ -130,7 +99,6 @@ find . -iname "*${1}*"
 
 # Nmap
 alias nmap='sudo nmap --stats-every 10s'
-# vim: ft=zsh
 
 # Curl
 alias curl='curl -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"'
