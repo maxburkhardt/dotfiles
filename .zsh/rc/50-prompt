@@ -4,7 +4,7 @@
 
 local return_code="%(?..%{$fg[red]%}%? <%{$reset_color%})"
 
-local user_host="%{$fg[magenta]%}%n@%m%{$reset_color%}"
+local user_host="%{$fg[magenta]%}%n@devil%{$reset_color%}"
 local current_dir="%{$fg[yellow]%} %~%{$reset_color%}"
 local current_time="%{$terminfo[bold]$fg[white]%} %T%{$reset_color%}"
 

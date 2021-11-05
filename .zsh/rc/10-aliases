@@ -101,7 +101,7 @@ find . -iname "*${1}*"
 alias nmap='sudo nmap --stats-every 10s'
 
 # Curl
-alias curl='curl -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"'
+alias curl='curl -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"'
 
 # Connectivity testing
 alias pg='ping google.com'

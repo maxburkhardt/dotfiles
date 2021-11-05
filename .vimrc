@@ -159,6 +159,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rhubarb'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-haml'
 " Markdown highlighting
@@ -190,6 +191,8 @@ Plugin 'hashivim/vim-terraform'
 " Better JSX highlighting
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+" Nord theme
+Plugin 'arcticicestudio/nord-vim'
 
 
 if !isdirectory(expand("~/.vim/bundle/vim-fugitive"))
@@ -206,7 +209,8 @@ let g:solarized_hitrail = 1
 if !has('gui_running')
   let g:solarized_termcolors = 256
 end
-colorscheme monokai
+colorscheme nord
+" colorscheme monokai
 " colorscheme molokai
 " colorscheme inkpot
 " colorscheme delek
