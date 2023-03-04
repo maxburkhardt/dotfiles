@@ -11,6 +11,7 @@ set ignorecase          " Case-insensitive search
 set incsearch           " Jumps to search word as you type.
 set smartcase           " Override ignorecase when searching uppercase.
 set modeline            " Enables modelines.
+set modelines=5
 set wildmode=longest,list:full " How to complete <Tab> matches.
 "set tildeop             " Makes ~ an operator.
 set virtualedit=block   " Support moving in empty space in block mode.
