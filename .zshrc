@@ -32,8 +32,8 @@ alias ls='ls -G'
 # Prompt
 local return_code="%(?..%{$fg[red]%}%? <%{$reset_color%})"
 
-local user_host="%{$fg[magenta]%}%n@%m%{$reset_color%}"
-local current_dir="%{$fg[yellow]%} %~%{$reset_color%}"
+local user_host="%{$fg[blue]%}%n@%m%{$reset_color%}"
+local current_dir="%{$fg[cyan]%} %~%{$reset_color%}"
 local current_time="%{$terminfo[bold]$fg[white]%} %T%{$reset_color%}"
 
 export PROMPT="${user_host} ${current_dir} ${current_time}
