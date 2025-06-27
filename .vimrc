@@ -210,7 +210,8 @@ let g:solarized_hitrail = 1
 if !has('gui_running')
   let g:solarized_termcolors = 256
 end
-colorscheme nord
+colorscheme default
+" colorscheme nord
 " colorscheme monokai
 " colorscheme molokai
 " colorscheme inkpot
@@ -328,8 +329,8 @@ map Q ]s
 
 " Mouse mode (experimental)
 set mouse=a
-" This enables mouse-resizable splits on OS X / tmux
-set ttymouse=xterm2
+" Try this if mouse mode is not working properly in tmux
+"set ttymouse=xterm2
 
 " Special config for gvim on GNOME
 set guifont=Monospace
