@@ -56,6 +56,21 @@ _cols()
   done
 }
 
+# brew, if on macOS
+if [[ "$OSTYPE" == darwin* ]]; then
+  for brew in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+    if [[ -x "$brew" ]]; then
+      eval "$("$brew" shellenv)"
+      break
+    fi
+  done
+fi
+
+# fzf for ctrl+r history search
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
+
 LOCAL_ZSHRC="$HOME/.zshrc.local"
 if [ -f $LOCAL_ZSHRC ]; then
     source $LOCAL_ZSHRC
