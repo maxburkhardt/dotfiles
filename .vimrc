@@ -101,8 +101,8 @@ nmap <Leader>= :call Preserve("normal gg=G")<CR>
 " Highlight text last pasted.
 nnoremap <expr> <Leader>p '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-colorscheme monokai
-" colorscheme nord
+colorscheme nord
+" colorscheme monokai
 " colorscheme molokai
 " colorscheme inkpot
 " colorscheme delek
@@ -111,9 +111,7 @@ colorscheme monokai
 "                                Filetype Stuff
 " =============================================================================
 
-if &t_Co > 2 || has('gui_running')
-  syntax on
-endif
+syntax on
 
 
 " Transparent editing of gpg encrypted files.
@@ -166,8 +164,10 @@ map Q ]s
 
 " Mouse mode (experimental)
 set mouse=a
-" This enables mouse-resizable splits on OS X / tmux
-set ttymouse=xterm2
+" In tmux/modern terminals, use SGR mouse reporting.
+if exists('&ttymouse')
+  set ttymouse=sgr
+endif
 
 " I like tabs more than buffers
 " (This is `open file under cursor`)
