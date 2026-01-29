@@ -2,6 +2,19 @@
 "                               General settings
 " =============================================================================
 set nocompatible        " iMproved.
+
+" Plugins
+filetype off
+" To get Vundle, run `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+" Then :PluginInstall afterwards to install these
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
+call vundle#end()
+filetype plugin indent on
+
 set autoindent          " Copy indent from current line on starting a new line.
 set backspace=indent,eol,start " Backspacing over everything in insert mode.
 set hidden              " Allow for putting dirty buffers in background.
