@@ -18,6 +18,9 @@ setopt hist_reduce_blanks       # Remove superfluous blanks.
 setopt interactive_comments     # allow comments even in interactive shells
 setopt no_flow_control          # ignore ^S/^Q
 
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
 # Aliases
 alias gitst='git status'
 alias hist-full='history -E 1'
