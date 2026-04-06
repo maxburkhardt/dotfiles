@@ -8,4 +8,5 @@ Icon?
 *.swp
 .vim/swpfiles/*.sw*
 .vim/bundle
+.vim/.netrwhist
 .zsh/cache
