@@ -23,6 +23,8 @@ bindkey '^E' end-of-line
 
 # Aliases
 alias gitst='git status'
+alias gs="git status"
+alias gsu="git status -uno"
 alias hist-full='history -E 1'
 alias tcpdump-full='sudo tcpdump -nnvvXSs 1514'
 alias tmux='tmux -2'
