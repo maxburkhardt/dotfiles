@@ -28,6 +28,7 @@ alias gsu="git status -uno"
 alias hist-full='history -E 1'
 alias tcpdump-full='sudo tcpdump -nnvvXSs 1514'
 alias tmux='tmux -2'
+alias vi='vim'
 alias nmap='sudo nmap --stats-every 10s'
 alias pg='ping google.com'
 export LSCOLORS="GxFxFxdxCxDxDxhbadExEx"
