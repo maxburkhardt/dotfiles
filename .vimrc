@@ -31,9 +31,6 @@ set suffixes+=.info,.out,.o,.lo
 
 set viminfo='20,\"500
 
-" No header when printing.
-set printoptions+=header:0
-
 scriptencoding utf-8
 
 " =============================================================================
@@ -89,9 +86,6 @@ nnoremap <CR> :noh<CR><CR>
 
 " Toggle list mode (display unprintable characters).
 nnoremap <F11> :set list!<CR>
-
-" Toggle paste mode.
-set pastetoggle=<F12>
 
 " Quicker navigation for non-wrapped lines.
 vmap <D-j> gj
