@@ -10,8 +10,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
 call vundle#end()
 filetype plugin indent on
 
