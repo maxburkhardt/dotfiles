@@ -14,6 +14,9 @@ end
 
 local function git(args, cwd)
   local cmd = { "git" }
+  table.insert(cmd, "-c")
+  table.insert(cmd, "core.fsmonitor=false")
+
   if cwd and cwd ~= "" then
     table.insert(cmd, "-C")
     table.insert(cmd, cwd)
@@ -71,6 +74,19 @@ local function parse_remote_url(remote_url)
   end
 
   return nil, nil
+end
+
+local function github_repo_from_remote(remote_url)
+  local host, repo = parse_remote_url(remote_url)
+  if not host or not repo then
+    return nil, "Could not parse GitHub remote URL: " .. remote_url
+  end
+
+  if host:lower() ~= "github.com" then
+    return nil, "Git remote must point at github.com: " .. remote_url
+  end
+
+  return repo, nil
 end
 
 local function encode_path(path)
@@ -167,15 +183,15 @@ function M.url(opts)
     return nil, "Could not resolve Git remote: " .. remote_name
   end
 
-  local host, repo = parse_remote_url(remote_url)
-  if not host or not repo then
-    return nil, "Could not parse GitHub remote URL: " .. remote_url
+  local repo, repo_err = github_repo_from_remote(remote_url)
+  if not repo then
+    return nil, repo_err
   end
 
   dirty_warning(ctx)
 
   local line1, line2 = range_from_opts(opts)
-  local url = ("https://%s/%s/blob/%s/%s#L%d"):format(host, repo, rev, encode_path(ctx.relpath), line1)
+  local url = ("https://github.com/%s/blob/%s/%s#L%d"):format(repo, rev, encode_path(ctx.relpath), line1)
   if line2 ~= line1 then
     url = url .. ("-L%d"):format(line2)
   end
