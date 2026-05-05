@@ -1,0 +1,4 @@
+{
+  "browsher.nvim": { "branch": "main", "commit": "6d87d5b8b0d178f75ee047a04f11c5b172fa705a" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" }
+}

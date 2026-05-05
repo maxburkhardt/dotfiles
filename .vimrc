@@ -78,9 +78,6 @@ endif
 "                                 Key Bindings
 " =============================================================================
 
-let mapleader = ','
-let maplocalleader = '\'
-
 " Clear last search highlighting
 nnoremap <CR> :noh<CR><CR>
 
