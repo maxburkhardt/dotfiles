@@ -6,8 +6,8 @@ HISTSIZE=100000
 SAVEHIST=100000
 REPORTTIME=5                    # Display usage statistics for commands running > 5 sec.
 
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 
 setopt append_history           # Don't overwrite history
 setopt extended_history         # Also record time and duration of commands.
